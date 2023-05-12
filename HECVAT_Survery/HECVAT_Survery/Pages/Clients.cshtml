@@ -1,0 +1,37 @@
+﻿@page
+@model HECVAT_Survery.Pages.ClientsModel
+@{
+}
+
+<br>
+<h2>List of HECVAT Approved Clients</h2>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Phone</th>
+			<th>Address</th>
+
+		</tr>
+	</thead>
+
+	@*DISPLAY TABLE RESULTS*@
+	<tbody>
+		@foreach(var item in Model.listClients)
+		{
+		<tr>
+			<td>@item.Customer_ID</td>
+			<td>@item.Customer_Username</td>
+			<td>@item.Customer_Email</td>
+			<td>@item.Customer_Phone</td>
+			<td>@item.Customer_City</td>
+		</tr>
+		}
+	</tbody>
+
+
+
+</table>
